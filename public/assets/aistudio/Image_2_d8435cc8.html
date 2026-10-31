@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><title>Watsons AI Beauty Advisor</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-tertiary": "#ffffff",
+          "secondary-fixed": "#b8ede1",
+          "error": "#ba1a1a",
+          "primary": "#205b54",
+          "secondary": "#35675e",
+          "on-error-container": "#93000a",
+          "outline": "#707977",
+          "surface-container": "#e7f4ef",
+          "on-secondary-fixed-variant": "#1a4f46",
+          "on-secondary-fixed": "#00201b",
+          "inverse-on-surface": "#e0f5f0",
+          "error-container": "#ffdad6",
+          "surface-container-low": "#edf7f3",
+          "tertiary": "#1d413a",
+          "background": "#f8faf8",
+          "surface-container-highest": "#d4ece3",
+          "tertiary-fixed": "#c4ebe0",
+          "secondary-fixed-dim": "#9dd1c5",
+          "outline-variant": "#bfc8c6",
+          "on-surface": "#0c1f1c",
+          "on-error": "#ffffff",
+          "tertiary-container": "#355951",
+          "surface-variant": "#d4ece3",
+          "on-primary-fixed": "#00201d",
+          "primary-fixed-dim": "#98d1c8",
+          "inverse-surface": "#223431",
+          "inverse-primary": "#98d1c8",
+          "surface-tint": "#2e6860",
+          "secondary-container": "#d4ece3",
+          "on-primary": "#ffffff",
+          "on-primary-container": "#cbe8e1",
+          "on-tertiary-fixed": "#00201a",
+          "surface-container-lowest": "#ffffff",
+          "on-tertiary-fixed-variant": "#294d45",
+          "surface-bright": "#f8faf8",
+          "surface": "#f8faf8",
+          "primary-fixed": "#b3eee4",
+          "on-tertiary-container": "#a8cec3",
+          "primary-container": "#1a4f48",
+          "on-background": "#0c1f1c",
+          "surface-container-high": "#d8ede7",
+          "on-secondary": "#ffffff",
+          "surface-dim": "#caded9",
+          "on-surface-variant": "#404947",
+          "on-secondary-container": "#1a4f46",
+          "on-primary-fixed-variant": "#104f49",
+          "tertiary-fixed-dim": "#a8cec4",
+          "brand-sage": "#205b54",
+          "calm-eucalyptus": "#3b7d72",
+          "sage-tint": "#e7f4ef",
+          "sage-badge": "#d4ece3"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "space-xs": "0.25rem",
+          "gutter": "1rem",
+          "space-sm": "0.5rem",
+          "space-md": "1rem",
+          "gutter-desktop": "2rem",
+          "margin": "1rem",
+          "space-lg": "1.5rem",
+          "margin-tablet": "2rem",
+          "space-xl": "2.5rem",
+          "margin-desktop": "3rem",
+          "gutter-tablet": "1.5rem"
+        },
+        "fontFamily": {
+          "body-md": ["Plus Jakarta Sans"],
+          "display-lg-mobile": ["Epilogue"],
+          "label-md": ["Plus Jakarta Sans"],
+          "body-lg": ["Plus Jakarta Sans"],
+          "label-sm": ["Plus Jakarta Sans"],
+          "headline-md": ["Epilogue"],
+          "headline-lg-mobile": ["Epilogue"],
+          "display-lg": ["Epilogue"],
+          "label-lg": ["Plus Jakarta Sans"],
+          "body-sm": ["Plus Jakarta Sans"],
+          "headline-lg": ["Epilogue"],
+          "headline-sm": ["Epilogue"],
+          "title-md": ["Plus Jakarta Sans"],
+          "title-lg": ["Plus Jakarta Sans"],
+          "price-sm": ["Plus Jakarta Sans"],
+          "price-lg": ["Plus Jakarta Sans"]
+        },
+        "fontSize": {
+          "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }],
+          "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+          "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+          "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }],
+          "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "500" }],
+          "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+          "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+          "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+          "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+          "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }],
+          "headline-lg": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+          "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+          "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }],
+          "title-lg": ["18px", { "lineHeight": "26px", "fontWeight": "600" }],
+          "price-sm": ["14px", { "lineHeight": "18px", "fontWeight": "600" }],
+          "price-lg": ["20px", { "lineHeight": "24px", "fontWeight": "700" }]
+        }
+      }
+    }
+  }
+</script><style>@layer base { html, body { width: 100%; margin: 0; padding: 0; min-height: 100%; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } } ::-webkit-scrollbar { display: none; }</style></head><body class="bg-background text-on-surface antialiased min-h-screen flex flex-col"><header class="fixed top-0 w-full z-50 bg-[#f8faf8]/90 backdrop-blur-xl border-b border-outline-variant/20 pt-safe"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="flex items-center px-2.5 py-1 rounded-full bg-primary text-white font-headline-sm text-xs font-bold tracking-wider">WATSONS</div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight font-bold">BeautyAI</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-none">Home</span></div></div><div class="flex items-center gap-space-xs"><div class="inline-flex items-center p-0.5 rounded-full bg-surface-container border border-outline-variant/30 text-label-sm font-label-sm"><span class="px-2.5 py-1 rounded-full bg-surface-container-lowest text-primary font-semibold shadow-sm leading-none cursor-pointer">EN</span><span class="px-2.5 py-1 rounded-full text-on-surface-variant hover:text-on-surface leading-none cursor-pointer transition-colors">中</span></div><button aria-label="Notifications" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-primary transition-colors" type="button"><span class="material-symbols-outlined text-2xl">notifications</span></button><a aria-label="Profile" class="w-11 h-11 flex items-center justify-center rounded-full" data-path="profile" href="#"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-primary/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDI2Ez8zHbssmL-dIQbXnsORNiF9mfZm8MePlvFRksO9vX5EBGoyZy-Yt-Jxy6Q_UubZKl2PMfwmYr-nm7g35ImuX7GFCi521QcQeDHxcrGY2lWdobmp8AaOMHWQpSSAO6fQiUIMycGeHZNP5S_bKELB50Ha5-iHWoUB_ydVhT4qYQ7qjzuIUT3ltuc1u-MUSYJ4uWN9PvJFD5kuISxOIY39FYuJN9_NiygQNwm3GMF4tiXFYcYuaksbQ"/></a></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-20 bg-background"><div class="flex flex-col w-full px-margin pb-space-xl gap-space-lg">
+<!-- Greeting & Health Status Area -->
+<section class="flex items-center justify-between pt-space-md">
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-on-surface tracking-tight">Good morning, Lin</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Skin Health &amp; Daily Advisor</span>
+</div>
+<!-- Status Pill -->
+<div class="flex items-center gap-1.5 py-1.5 px-3 rounded-full bg-surface-container border border-outline-variant/40 shadow-sm">
+<span class="w-2 h-2 rounded-full bg-calm-eucalyptus animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Balanced &amp; Hydrated</span>
+</div>
+</section>
+<!-- Hero Consultation Card -->
+<section class="relative overflow-hidden rounded-xl bg-gradient-to-br from-[#1a4f48] via-[#205b54] to-[#286b62] p-space-lg shadow-md text-white">
+<!-- Ambient Aesthetic Glow Vector -->
+<div class="absolute -right-10 -bottom-10 w-48 h-48 rounded-full bg-[#3b7d72]/25 blur-3xl pointer-events-none"></div>
+<div class="absolute right-4 top-4 opacity-15 pointer-events-none text-white">
+<span class="material-symbols-outlined text-7xl">psychology</span>
+</div>
+<div class="relative z-10 flex flex-col gap-space-sm">
+<div class="flex items-center gap-1.5 self-start px-3 py-1 rounded-full bg-white/15 backdrop-blur-md border border-white/20">
+<span class="material-symbols-outlined text-sm text-[#b8ede1]" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="font-label-sm text-label-sm text-[#e7f4ef] tracking-wide uppercase font-semibold">AI Diagnostic</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg tracking-tight text-white mt-1">
+        Personalised Beauty Consultation
+      </h2>
+<p class="font-body-md text-body-md text-[#d4ece3]/90 max-w-[90%]">
+        Answer 4 quick lifestyle questions to discover products tailored to your unique skin barrier.
+      </p>
+<div class="pt-space-sm">
+<a class="inline-flex items-center justify-center gap-2 px-space-lg py-3 rounded-full bg-surface-container-highest text-primary font-label-lg text-label-lg font-semibold shadow-sm hover:brightness-95 active:scale-[0.98] transition-all" data-path="ai-advisor" href="#">
+<span>Find what suits me</span>
+<span class="material-symbols-outlined text-lg">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Quick Action Entry Points (2-Column Grid) -->
+<section class="grid grid-cols-2 gap-space-sm">
+<!-- Card 1: Compare Products -->
+<div class="group relative flex flex-col justify-between p-space-md rounded-xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm hover:shadow-md transition-shadow active:scale-[0.99] cursor-pointer">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-xl">balance</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-sm group-hover:translate-x-0.5 transition-transform">chevron_right</span>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-on-surface mb-0.5">Compare products</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-tight">Check ingredients &amp; side-by-side efficacy</p>
+</div>
+</div>
+<!-- Card 2: Visit a Store -->
+<div class="group relative flex flex-col justify-between p-space-md rounded-xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm hover:shadow-md transition-shadow active:scale-[0.99] cursor-pointer">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-xl">store</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-sm group-hover:translate-x-0.5 transition-transform">chevron_right</span>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-on-surface mb-0.5">Visit a store</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-tight">Book counter test at Jing'an Store (0.8 km)</p>
+</div>
+</div>
+</section>
+<!-- Skincare Profile Card -->
+<section class="flex flex-col p-space-md rounded-xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl" style="font-variation-settings: 'FILL' 1;">health_and_safety</span>
+<span class="font-title-md text-title-md text-on-surface">Skincare Profile</span>
+</div>
+<span class="font-label-sm text-label-sm text-calm-eucalyptus font-semibold">Active Matrix</span>
+</div>
+<!-- Profile Details & Tags -->
+<div class="grid grid-cols-2 gap-space-xs pt-1">
+<div class="flex flex-col p-2.5 rounded-lg bg-surface-container-low border border-outline-variant/20">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Skin Type</span>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold truncate">Combination Sensitive</span>
+</div>
+<div class="flex flex-col p-2.5 rounded-lg bg-surface-container-low border border-outline-variant/20">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Target Focus</span>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold truncate">Barrier Repair &amp; SPF</span>
+</div>
+</div>
+<!-- Routine Progress Gauge -->
+<div class="flex flex-col gap-1.5 pt-space-xs">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Morning routine completed today</span>
+<span class="text-primary font-semibold">3/3 steps</span>
+</div>
+<!-- Progress Bar Track -->
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-calm-eucalyptus rounded-full w-full"></div>
+</div>
+</div>
+</section>
+<!-- Current Routine Preview -->
+<section class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="font-title-md text-title-md text-on-surface">Current Routine</span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-highest text-primary font-label-sm text-label-sm font-semibold border border-outline-variant/30">AM Protocol</span>
+</div>
+<a class="inline-flex items-center gap-0.5 font-label-md text-label-md text-primary font-semibold hover:underline" data-path="my-routine" href="#">
+<span>View full routine</span>
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</a>
+</div>
+<!-- Horizontal Routine Preview Cards -->
+<div class="flex gap-space-sm overflow-x-auto pb-2 -mx-margin px-margin">
+<!-- Step 1 -->
+<div class="flex-shrink-0 w-44 flex flex-col p-space-sm rounded-xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm gap-2">
+<div class="relative w-full h-32 rounded-lg bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A clean, minimalist white pump dispenser bottle of Gentle Amino Cleanser sitting on a polished porcelain slab with gentle natural daylight and soft water ripples in soft teal tone." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVJ2BiW8-hBPG7Y2Ey0yKSGNV9w_M1OeHXEuKqJIKDLUm60eIUwveocYJcvi9tJ9jot-l0CyuqMbNhY06ug76PnhblZCOBHkpiEv9D1v5gbUvTrGP83W1myNOemKXt6MYNRtVQ9hiY0S_nyquOfMcnIA9NbOwZt1DaWBveOK4Lp1E_K17PpxLk_THDz04NLAdJSpAj1Ibxvg4y8kKu2oBweuyoun4U3Kapy-sGy-16FB_qpaocpSFrvw"/>
+<div class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-surface-container-lowest/95 backdrop-blur-sm text-on-surface font-label-sm text-label-sm font-semibold shadow-xs">
+            Step 1
+          </div>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-calm-eucalyptus font-semibold">Cleanser</span>
+<span class="font-label-lg text-label-lg text-on-surface truncate">Gentle Amino Cleanser</span>
+<span class="font-price-sm text-price-sm text-on-surface-variant mt-1">¥89.00</span>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="flex-shrink-0 w-44 flex flex-col p-space-sm rounded-xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm gap-2">
+<div class="relative w-full h-32 rounded-lg bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A premium dermatological soothing cream tube of B5 Soothing Balm displayed on a minimal pedestal with soft teal accent shadows and subtle botanical leaf refraction." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCddTyQ_sD-dNPWbrUCm1usej6-Tcs7LqBCa28t64TBJq1ugmJWefdS9oLVlAU5Zmpuk8mI5H16nhP2_JBsXr6mDn_YEAi___Deh3ZPwJATccXLf5TdOUoQcjf-1UBjRwx2VlYXEMu-OaasqA6_Js0p0IS21MnOCzOmhdG6XFW7Q34OrEvlurL4yELEDIIjhXXUkvSYX7dDzV4oCK3sJ33vHQRMZ5-VufifFg0uph9qmNqY7izgq8aW1Q"/>
+<div class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-surface-container-lowest/95 backdrop-blur-sm text-on-surface font-label-sm text-label-sm font-semibold shadow-xs">
+            Step 2
+          </div>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-calm-eucalyptus font-semibold">Treatment</span>
+<span class="font-label-lg text-label-lg text-on-surface truncate">B5 Soothing Balm</span>
+<span class="font-price-sm text-price-sm text-on-surface-variant mt-1">¥148.00</span>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="flex-shrink-0 w-44 flex flex-col p-space-sm rounded-xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm gap-2">
+<div class="relative w-full h-32 rounded-lg bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="An elegant cosmetic fluid sunscreen bottle of SPF 50+ Invisible Shield placed on a luminous stone block under bright crisp sunlight evoking total UV barrier defence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGOgKTwbx-QzHVbWfte9exLiVUaSELuNwrLRwecsBRR7prHyvTLnSUk3cnfm5IsAdHPI8t5lKt5KmWulEyIMAyKGajCN3ZCBBl_tSttx9vkK_JKX_a-uaItGfCkwHnxxBf760cYvZxcSs0LDp9CXpTZWcsR7eXVfrf5rC5nNsEehNIkaQmE0PiwtAOwIbZ92rV8xg_zAjQsQQeYsDFBVmWUbVZbtbi1vJb3xtupnfFaIRjWCBl6jK7RQ"/>
+<div class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-surface-container-lowest/95 backdrop-blur-sm text-on-surface font-label-sm text-label-sm font-semibold shadow-xs">
+            Step 3
+          </div>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-calm-eucalyptus font-semibold">Shield</span>
+<span class="font-label-lg text-label-lg text-on-surface truncate">SPF 50+ Invisible Shield</span>
+<span class="font-price-sm text-price-sm text-on-surface-variant mt-1">¥169.00</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Store Connection Banner -->
+<section class="flex items-center gap-space-md p-space-md rounded-xl bg-surface-container border border-outline-variant/20 shadow-sm">
+<div class="relative flex-shrink-0">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="Friendly professional East Asian female beauty advisor wearing a modern uniform with warm smile in an upscale clinical retail beauty store ambiance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6IN7eCwGIMGKc78IiORHmzQjCqfqxzwn9yJrMi4OITDxKka8-77TZUJj3ZjSpo3Wdw1fX4vXJS0mr8EXlH4IgZFecAFczUvITdnSmAL6PKXRazoOCMxiJHZZFK3f7MqWX8Qge27NEJi4rsJmU_1-GNjIiAASqa0MKDlB0N42EHePkVb7k17lZja1B7oDrJQbAnc9LNFLNJH8vBXCdePDJY0hkGJ5Sa343Pn2_-26VkOnz0sEVz-oaGg"/>
+</div>
+<span class="absolute bottom-0 right-0 w-3.5 h-3.5 rounded-full bg-calm-eucalyptus ring-2 ring-surface-container"></span>
+</div>
+<div class="flex-1 flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-primary font-semibold tracking-wide uppercase">In-Store BA Support Available</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface mt-0.5 leading-snug">
+        Meet Advisor Chen at West Nanjing Rd Store today 10:00 - 20:00. Fast sample reservation ready.
+      </p>
+</div>
+<button aria-label="Reserve sample counter test" class="flex-shrink-0 w-9 h-9 rounded-full bg-surface-container-lowest border border-outline-variant/30 flex items-center justify-center text-primary shadow-sm active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-xl">event_available</span>
+</button>
+</section>
+</div>
+<script>
+  // Ensure the Home navigation tab reflects active selection
+  (function initActiveNavigation() {
+    const navLinks = document.querySelectorAll('nav a');
+    navLinks.forEach(link => {
+      if (link.getAttribute('data-path') === 'home') {
+        link.classList.remove('text-on-surface-variant');
+        link.classList.add('text-primary', 'font-semibold');
+      } else {
+        link.classList.remove('text-primary', 'font-semibold');
+        link.classList.add('text-on-surface-variant');
+      }
+    });
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-[#f8faf8]/90 backdrop-blur-xl border-t border-outline-variant/20 shadow-[0_-2px_12px_rgba(0,0,0,0.03)]" data-active-classes="text-primary font-semibold"><div class="flex justify-around items-center h-16 px-space-xs"><a aria-current="page" class="flex flex-col items-center justify-center gap-0.5 min-w-[64px] min-h-[44px] py-1 transition-colors text-primary font-semibold" data-path="home" href="#"><span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">home</span><span class="font-label-sm text-label-sm">Home</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[64px] min-h-[44px] py-1 text-on-surface-variant hover:text-primary transition-colors" data-path="ai-advisor" href="#"><span class="material-symbols-outlined text-2xl">auto_awesome</span><span class="font-label-sm text-label-sm">AI Advisor</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[64px] min-h-[44px] py-1 text-on-surface-variant hover:text-primary transition-colors" data-path="my-routine" href="#"><span class="material-symbols-outlined text-2xl">spa</span><span class="font-label-sm text-label-sm">My Routine</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[64px] min-h-[44px] py-1 text-on-surface-variant hover:text-primary transition-colors" data-path="profile" href="#"><span class="material-symbols-outlined text-2xl">person</span><span class="font-label-sm text-label-sm">Profile</span></a></div></nav></body></html>

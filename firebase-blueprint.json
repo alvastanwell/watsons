@@ -1,0 +1,83 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "User profile information",
+      "type": "object",
+      "properties": {
+        "nickname": { "type": "string" },
+        "email": { "type": "string" },
+        "avatar": { "type": "string" },
+        "skinType": { "type": "string" },
+        "concerns": { "type": "array" },
+        "budget": { "type": "string" },
+        "preferences": { "type": "string" },
+        "ingredientsToAvoid": { "type": "string" }
+      },
+      "required": ["nickname", "email"]
+    },
+    "UserRoutine": {
+      "title": "UserRoutine",
+      "description": "User customized skincare routine and daily check-ins",
+      "type": "object",
+      "properties": {
+        "routineName": { "type": "string" },
+        "morningSteps": { "type": "array" },
+        "eveningSteps": { "type": "array" },
+        "checkInHistory": { "type": "array" }
+      }
+    },
+    "Cart": {
+      "title": "Cart",
+      "description": "User shopping cart state",
+      "type": "object",
+      "properties": {
+        "items": { "type": "array" }
+      }
+    },
+    "AssessmentHistoryRecord": {
+      "title": "AssessmentHistoryRecord",
+      "description": "User skin assessment archive entry",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "method": { "type": "string" },
+        "summary": { "type": "string" }
+      }
+    },
+    "OrderRecord": {
+      "title": "OrderRecord",
+      "description": "User order records",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "orderNumber": { "type": "string" },
+        "totalAmount": { "type": "number" },
+        "createdAt": { "type": "string" }
+      }
+    }
+  },
+  "firestore": {
+    "/users/{userId}/profile/data": {
+      "schema": "UserProfile",
+      "description": "User profile document"
+    },
+    "/users/{userId}/routine/current": {
+      "schema": "UserRoutine",
+      "description": "User skincare routine and check-in history"
+    },
+    "/users/{userId}/cart/current": {
+      "schema": "Cart",
+      "description": "User shopping cart"
+    },
+    "/users/{userId}/assessment_history/{recordId}": {
+      "schema": "AssessmentHistoryRecord",
+      "description": "User skin assessment history"
+    },
+    "/users/{userId}/orders/{orderId}": {
+      "schema": "OrderRecord",
+      "description": "User orders"
+    }
+  }
+}

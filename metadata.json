@@ -1,0 +1,10 @@
+{
+  "name": "Remix Watsons China AI Beauty Advisor",
+  "description": "Botanical AI beauty advisor and skincare regimen companion with transparent formulation comparison, store counter reservations, and post-purchase routine tracking.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
